@@ -4,7 +4,7 @@
 
 .top{
   text-align: center;
-  margin: 2rem;
+  margin: 2rem 2rem 0 2rem;
   line-height: 1.15;
 }
 
@@ -22,16 +22,18 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  min-height: 25rem;
 }
 
 .Nav{
   display: flex;
   justify-content:space-evenly;
   align-items: center;
+  margin-top: 2rem;
   
 }
 .navName{
-  min-width: 4.5rem;
+  min-width: 5rem;
 }
 .ImageContainer{
   margin: 1rem 0;
@@ -40,14 +42,14 @@
   text-align: center;
 }
 .homeImage{
-  max-width: 80%;
-  max-height: 80%;
+  max-width: 70%;
+  max-height: 70%;
 }
 .contactT{
   display: flex;
   justify-content: center;
   text-align: center;
-  margin-top: 3rem;
+  margin: 0;
   font-size: 0.9rem;
 }
 .contact{
