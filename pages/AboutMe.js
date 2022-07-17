@@ -6,7 +6,7 @@ const AboutMe = ()=>{
             <div className={styles.aboutMe}>
                 <div className={styles.ProfileContainer}>
                     <Image className={styles.profileImage}
-                        src="/imgs/profile5.jpg"
+                        src="/imgs/Profile5.jpg"
                         height={180}
                         width={180}
                         alt="img"
