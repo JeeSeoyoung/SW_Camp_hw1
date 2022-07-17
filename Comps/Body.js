@@ -7,9 +7,9 @@ const Body = () => {
         <div className={styles.article}>
             <div className={styles.ImageContainer}>
                 <Image
-                    src="/imgs/profile2.png"
-                    height={400} // 해당 크기만큼의 비율을 반응형으로 보장 받을 수 있게됨!!
-                    width={400}
+                    src="/imgs/profile6.png"
+                    height={300} // 해당 크기만큼의 비율을 반응형으로 보장 받을 수 있게됨!!
+                    width={300}
                     alt="img"
                 />
             </div>

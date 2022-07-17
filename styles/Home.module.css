@@ -1,5 +1,5 @@
 .container {
-  padding: 0 2rem;
+  padding: 0 2vw;
 }
 
 .top{
@@ -22,46 +22,71 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  max-height: 26rem;
-  max-width: 80vw;
-  margin: 0 auto 0;
+  min-height: 26rem;
+  max-width: 60vw;
+  margin: 0 auto;
 }
 
 .Nav{
   display: flex;
   justify-content:space-evenly;
   align-items: center;
-  margin-top: 2rem;
+  margin-top: 1rem;
   
 }
 .navName{
   min-width: 5rem;
 }
 .ImageContainer{
-  margin: 1rem 0;
-  height: fit-content;
-  width: fit-content;
+  /* margin: 1rem 0; */
+  height: 20rem;
   text-align: center;
 }
 .homeImage{
-  max-width: 70%;
-  max-height: 70%;
+  max-width: 100%;
+  max-height: 100%;
+}
+.aboutMe{
+  display: flex;
+  flex-direction: column;
 }
 .ProfileContainer{
+  flex: 1;
   height:20rem;
   /* width: 20rem; */
   text-align: center;
   align-items: center;
 }
 .profileImage{
-  flex: 1;
   margin: 1rem;
-  border-radius: 5%;
+  border-radius: 100%;
   max-width: 100%;
   max-height: 100%;
 }
 .detail{
   flex: 1;
+  font-size: calc(0.75em+1vw);
+  text-align: center;
+}
+.detail h4{
+  font-size: calc(0.75em+1vw);
+
+}
+.detail p{
+  font-size: calc(0.75em+1vw);
+}
+.skills{
+  display: flex;
+  flex-direction: column;
+}
+.skillsDetail{
+  flex: 1;
+  text-align: center;
+  min-width: 20vw;
+  min-height: 20vh;
+}
+.skillsDetail h4{
+  font-size: calc(0.75em +1vw);
 }
 .contactT{
   display: flex;
@@ -78,4 +103,9 @@
 .contactIMG{
   height: 2rem;
   margin: 0 1rem;
+}
+.navName:hover,
+.navName:focus,
+.navName:active {
+  color: #0070f3;
 }
