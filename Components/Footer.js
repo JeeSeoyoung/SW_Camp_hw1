@@ -4,7 +4,7 @@ const Footer = () => {
     return (
     <div>
         <div className={styles.contactT}>
-            <h2>CONTACTS</h2>
+            <h2>CONTACT</h2>
         </div>
 
         <div className={styles.contact}>
