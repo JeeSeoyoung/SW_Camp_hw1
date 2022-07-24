@@ -2,34 +2,57 @@ import styles from '../styles/Home.module.css'
 import Link from 'next/link';
 import styled from 'styled-components';
 
+const MainTop = styled.div`
+text-align: center;
+margin: 2rem 2rem 0 2rem;
+line-height: 1.15;
+`;
 const HomeTitle = styled.a`
 font-size: 3rem;
+font-weight:bold;
 margin-bottom: 1rem;
 color: #4791FF;
+`;
+const HomeSubTitle = styled.p`
+font-size: 0.9rem;
+`;
+const NavContainer = styled.div`
+display: flex;
+justify-content:space-evenly;
+align-items: center;
+margin-top: 2.1rem;
+`;
+const Nav = styled.div`
+min-width: 5rem;
+`;
+const NavBtn = styled.a`
+font-size:1.1rem;
+text-align:center;
+font-weight:bold;
 `;
 
 const Top = () => {
     return (
-    <div className={styles.top}>
+    <MainTop>
         <Link href="/">
             <HomeTitle>SEOYOUNG</HomeTitle>
         </Link>
-        <p className={styles.p}>Welcome To My Website \o/</p>
-        <div className={styles.Nav}>
-            <div className={styles.navName}>
-                <Link href="/AboutMe"><a><h3>About me</h3></a></Link>
-            </div>
-            <div className={styles.navName}>
-                <Link href="/"><a><h3>Home</h3></a></Link>
-            </div>
-            <div className={styles.navName}>
-                <Link href="/Skill"><a><h3>Skill</h3></a></Link>
-            </div>
-            <div className={styles.navName}>
-                <Link href="/Others"><a><h3>Others</h3></a></Link>
-            </div>
-        </div>
-    </div>
+        <HomeSubTitle>Welcome To My Website \o/</HomeSubTitle>
+        <NavContainer>
+            <Nav>
+                <Link href="/AboutMe"><NavBtn>About me</NavBtn></Link>
+            </Nav>
+            <Nav>
+                <Link href="/"><NavBtn>Home</NavBtn></Link>
+            </Nav>
+            <Nav>
+                <Link href="/Skill"><NavBtn>Skill</NavBtn></Link>
+            </Nav>
+            <Nav>
+                <Link href="/Others"><NavBtn>Others</NavBtn></Link>
+            </Nav>
+        </NavContainer>
+    </MainTop>
     );
 }
 
