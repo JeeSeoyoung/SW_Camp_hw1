@@ -25,6 +25,9 @@ const Top = () => {
             <div className={styles.navName}>
                 <Link href="/Skill"><a><h3>Skill</h3></a></Link>
             </div>
+            <div className={styles.navName}>
+                <Link href="/Others"><a><h3>Others</h3></a></Link>
+            </div>
         </div>
     </div>
     );
