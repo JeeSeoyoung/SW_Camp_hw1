@@ -1,11 +1,18 @@
 import styles from '../styles/Home.module.css'
 import Link from 'next/link';
+import styled from 'styled-components';
+
+const HomeTitle = styled.a`
+font-size: 3rem;
+margin-bottom: 1rem;
+color: #4791FF;
+`;
 
 const Top = () => {
     return (
     <div className={styles.top}>
         <Link href="/">
-        <a><h1 className={styles.title}>SEOYOUNG</h1></a>
+            <HomeTitle>SEOYOUNG</HomeTitle>
         </Link>
         <p className={styles.p}>Welcome To My Website \o/</p>
         <div className={styles.Nav}>
