@@ -31,7 +31,18 @@ text-align:center;
 font-weight:bold;
 `;
 
+function NavButton({navName,url}){
+    return(
+        <Nav>
+            <Link href={url}><NavBtn>{navName}</NavBtn></Link>
+        </Nav>
+    )
+}
+
 const Top = () => {
+    const navName = ["About Me","Home","Skills","Others"];
+    const url = ["/AboutMe","/","Skill","Others"];
+
     return (
     <MainTop>
         <Link href="/">
@@ -39,18 +50,7 @@ const Top = () => {
         </Link>
         <HomeSubTitle>Welcome To My Website \o/</HomeSubTitle>
         <NavContainer>
-            <Nav>
-                <Link href="/AboutMe"><NavBtn>About me</NavBtn></Link>
-            </Nav>
-            <Nav>
-                <Link href="/"><NavBtn>Home</NavBtn></Link>
-            </Nav>
-            <Nav>
-                <Link href="/Skill"><NavBtn>Skill</NavBtn></Link>
-            </Nav>
-            <Nav>
-                <Link href="/Others"><NavBtn>Others</NavBtn></Link>
-            </Nav>
+            {navName.map((data,idx) => <NavButton key={idx} navName={data} url = {url[idx]}/>)}
         </NavContainer>
     </MainTop>
     );

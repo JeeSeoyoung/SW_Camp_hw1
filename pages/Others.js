@@ -1,32 +1,57 @@
 import Image from 'next/image';
-import styles from '../styles/others.module.css';
 import profile from '../public/imgs/profile_heera.jpg';
+import styled from 'styled-components';
+import styles from '../styles/Home.module.css';
 
+const Article = styled.div`
+display: flex;
+justify-content: center;
+align-items: center;
+min-height: 26rem;
+max-width: 60vw;
+margin: 0 auto;
+`;
+const MainBody =styled.div`
+display: flex;
+flex-direction: column;
+`; 
+const ProfileContainer=styled.div`
+flex: 1;
+height:20rem;
+/* width: 20rem; */
+text-align: center;
+align-items: center;
+`;
+const Detail = styled.div`
+flex: 1;
+font-size: calc(0.75em+1vw);
+text-align: center;
+`;
 function Others() {
     return (
-        <div className={styles.mainContainer}>
-            <div className={styles.favContainer}>
-                <Image
-                    priority
-                    src={profile}
-                    className={styles.borderCircle}
-                    height={200}
-                    width={200}
-                    alt="profile"
-                />
-            </div>
-            <div style={{textAlign:'center'}}>
-                <h1 className={styles.heading2Xl}>Heera Choi</h1>
-                <div className={styles.contentTitle}>School of Global Entrepreneurship and ICT</div><br/>
-                <section className={styles.contents}>
-                    <div className={styles.contentTitle}>Major</div>
+        <Article>
+            <MainBody>
+                <ProfileContainer>
+                    <Image
+                        src={profile}
+                        height={170}
+                        width={170}
+                        alt="img"
+                    />
+                </ProfileContainer>
+                <Detail>
+                    <h2>Heera Choi</h2>
+                    <div>School of Global Entrepreneurship and ICT</div><br/>
+                
+                    <div>Major</div>
                     <div>ICT Convergence / Visual and Performing Arts</div>
-                    <div className={styles.contentTitle}>Skills</div>
+                    <div>Skills</div>
                     <div>💻 Python, Javascript, HTML, CSS</div>
                     <div>📽️ Premiere Pro, After Effects</div>
-                </section>
-            </div>
-        </div>
+                    
+                </Detail>
+            </MainBody>
+        </Article>
     );
 };
 

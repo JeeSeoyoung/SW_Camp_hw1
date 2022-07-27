@@ -1,14 +1,18 @@
 import Footer from "./Footer";
 import Top from "./Top";
 import styles from '../styles/Home.module.css'
+import styled from 'styled-components';
 
+const Container = styled.div`
+padding: 0 2vw;
+`;
 const Layout = ({children}) => {
     return (
-        <div className={styles.container}>
+        <Container>
             <Top></Top>
             {children}
             <Footer></Footer>
-        </div>
+        </Container>
     );
 }
 

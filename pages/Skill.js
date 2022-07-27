@@ -1,19 +1,37 @@
 import styles from '../styles/Home.module.css'
 import Image from "next/image";
+import styled from 'styled-components';
+
+const Article = styled.div`
+display: flex;
+justify-content: center;
+align-items: center;
+min-height: 26rem;
+max-width: 60vw;
+margin: 0 auto;
+`;
+const Skills =styled.div`
+display: flex;
+flex-direction: column;
+`;
+const SkillsDetail = styled.div`
+flex: 1;
+text-align: center;
+min-width: 20vw;
+min-height: 20vh;
+`;
 const Skill = ()=>{
     return(
-        <div className={styles.article}>
-            <div className={styles.skills}>
-                <div className={styles.skillsDetail}>
+        <Article>
+            <Skills>
+                <SkillsDetail>
                     <h4>Tool</h4>
                     <p>Figma  /  Illustrator  /  Photoshop  /  Unity</p>
-                </div>
-                <div className={styles.skillsDetail}>
                     <h4>Language</h4>
                     <p>Python  /  html  /  CSS  /  Javascript</p>
-                </div>
-            </div>
-        </div>
+                </SkillsDetail>
+            </Skills>
+        </Article>
     );
 }
 export default Skill;

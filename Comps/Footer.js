@@ -1,25 +1,57 @@
 import styles from '../styles/Home.module.css'
+import styled from 'styled-components';
+import Image from 'next/image';
+import Instagram from '../public/imgs/instagram.png'
+import Github from '../public/imgs/github.png'
+import Facebook from '../public/imgs/facebook.png'
+
+const ContactT = styled.div`
+display: flex;
+justify-content: center;
+text-align: center;
+margin: 0;
+font-size: 0.9rem;
+`;
+const Contact = styled.div`
+display: flex;
+justify-content: center;
+align-items: center;
+`;
+const ImageContainer =styled.div`
+height: 20rem;
+text-align: center;
+margin:0 1rem;
+`;
+
+function ContactButton({contactName,url}){
+    return(
+        <ImageContainer>
+            <a href={url}>
+                <Image 
+                    src={contactName}
+                    height={30}
+                    width={30}
+                    alt='img'
+                />
+            </a>
+        </ImageContainer>
+    )
+}
 
 const Footer = () => {
+    const contactName = [Instagram,Facebook,Github];
+    const url = ['https://www.instagram.com/__seoyoung.____/?hl=ko',
+                '',
+                'https://github.com/JeeSeoyoung']
     return (
     <div>
-        <div className={styles.contactT}>
+        <ContactT>
             <h2>CONTACT</h2>
-        </div>
+        </ContactT>
 
-        <div className={styles.contact}>
-            <div className={styles.ImageContainer}>
-                <a href='https://www.instagram.com/__seoyoung.____/?hl=ko' target="_blank" rel="noopener noreferrer">
-                    <img className={styles.contactIMG} src='/imgs/instagram.png'></img></a>
-            </div>
-            <div className={styles.ImageContainer}>
-                <a href=''><img className={styles.contactIMG} src='/imgs/facebook.png'></img></a>
-            </div>
-            <div className={styles.ImageContainer}>
-                <a href='https://github.com/JeeSeoyoung' target="_blank" rel="noopener noreferrer">
-                    <img className={styles.contactIMG} src='/imgs/github.png'></img></a>
-            </div>
-        </div>
+        <Contact>
+            {contactName.map((data,idx) => <ContactButton key={idx} contactName={data} url={url[idx]}/>)}
+        </Contact>
     </div>
     );
 }
