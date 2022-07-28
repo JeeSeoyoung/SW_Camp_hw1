@@ -7,7 +7,7 @@ const Article = styled.div`
 display: flex;
 justify-content: center;
 align-items: center;
-min-height: 26rem;
+min-height: 28rem;
 max-width: 60vw;
 margin: 0 auto;
 `;
@@ -18,11 +18,11 @@ flex-direction: column;
 const ProfileContainer=styled.div`
 flex: 1;
 height:20rem;
-/* width: 20rem; */
+width: 20rem;
 text-align: center;
 align-items: center;
 `;
-const ImageContainer=styled.div`
+const ImageContainer=styled(Image)`
 border-radius:100%;
 `;
 const Detail = styled.div`
@@ -35,14 +35,12 @@ const AboutMe = ()=>{
         <Article>
             <MainBody>
                 <ProfileContainer>
-                    <ImageContainer>
-                        <Image
+                        <ImageContainer
                             src={Profile}
                             height={180}
                             width={180}
                             alt="img"
                         />
-                    </ImageContainer>
                 </ProfileContainer>
                 <Detail>
                     <h4>Jee Seoyoung</h4>

@@ -7,7 +7,7 @@ const Article = styled.div`
 display: flex;
 justify-content: center;
 align-items: center;
-min-height: 26rem;
+min-height: 28rem;
 max-width: 60vw;
 margin: 0 auto;
 `;
