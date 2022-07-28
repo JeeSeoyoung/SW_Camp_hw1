@@ -12,6 +12,7 @@ font-size: 3rem;
 font-weight:bold;
 margin-bottom: 1rem;
 color: #4791FF;
+cursor:pointer;
 `;
 const HomeSubTitle = styled.p`
 font-size: 0.9rem;
@@ -29,6 +30,10 @@ const NavBtn = styled.a`
 font-size:1.1rem;
 text-align:center;
 font-weight:bold;
+&:hover{
+    color:#4791FF;
+};
+cursor:pointer;
 `;
 
 function NavButton({navName,url}){
