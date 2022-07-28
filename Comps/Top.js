@@ -1,4 +1,3 @@
-import styles from '../styles/Home.module.css'
 import Link from 'next/link';
 import styled from 'styled-components';
 

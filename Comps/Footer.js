@@ -1,9 +1,10 @@
 import styles from '../styles/Home.module.css'
-import styled from 'styled-components';
+// import styled from 'styled-components';
 import Image from 'next/image';
 import Instagram from '../public/imgs/instagram.png'
 import Github from '../public/imgs/github.png'
 import Facebook from '../public/imgs/facebook.png'
+import styled from 'styled-components'
 
 const ContactT = styled.div`
 display: flex;
