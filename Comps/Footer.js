@@ -1,32 +1,12 @@
-import styles from '../styles/Home.module.css'
-// import styled from 'styled-components';
+
 import Image from 'next/image';
 import Instagram from '../public/imgs/instagram.png'
 import Github from '../public/imgs/github.png'
 import Facebook from '../public/imgs/facebook.png'
-import styled from 'styled-components'
-
-const ContactT = styled.div`
-display: flex;
-justify-content: center;
-text-align: center;
-margin: 0;
-font-size: 0.9rem;
-`;
-const Contact = styled.div`
-display: flex;
-justify-content: center;
-align-items: center;
-`;
-const ImageContainer =styled.div`
-height: 20rem;
-text-align: center;
-margin:0 1rem;
-`;
 
 function ContactButton({contactName,url}){
     return(
-        <ImageContainer>
+        <div className='h-80 m-0 mx-4 text-center '>
             <a href={url}>
                 <Image 
                     src={contactName}
@@ -35,7 +15,7 @@ function ContactButton({contactName,url}){
                     alt='img'
                 />
             </a>
-        </ImageContainer>
+        </div>
     )
 }
 
@@ -46,13 +26,13 @@ const Footer = () => {
                 'https://github.com/JeeSeoyoung']
     return (
     <div>
-        <ContactT>
-            <h2>CONTACT</h2>
-        </ContactT>
+        <div className='flex text-center m-4 text-2xl font-bold justify-center'>
+            <p>CONTACT</p>
+        </div>
 
-        <Contact>
+        <div className='flex justify-center item-center'>
             {contactName.map((data,idx) => <ContactButton key={idx} contactName={data} url={url[idx]}/>)}
-        </Contact>
+        </div>
     </div>
     );
 }

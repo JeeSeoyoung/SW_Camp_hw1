@@ -1,45 +1,16 @@
 import Link from 'next/link';
-import styled from 'styled-components';
 
-const MainTop = styled.div`
-text-align: center;
-margin: 2rem 2rem 0 2rem;
-line-height: 1.15;
-`;
-const HomeTitle = styled.a`
-font-size: 3rem;
-font-weight:bold;
-margin-bottom: 1rem;
-color: #4791FF;
-cursor:pointer;
-`;
-const HomeSubTitle = styled.p`
-font-size: 0.9rem;
-`;
-const NavContainer = styled.div`
-display: flex;
-justify-content:space-evenly;
-align-items: center;
-margin-top: 2.1rem;
-`;
-const Nav = styled.div`
-min-width: 5rem;
-`;
-const NavBtn = styled.a`
-font-size:1.1rem;
-text-align:center;
-font-weight:bold;
-&:hover{
-    color:#4791FF;
-};
-cursor:pointer;
-`;
+
 
 function NavButton({navName,url}){
     return(
-        <Nav>
-            <Link href={url}><NavBtn>{navName}</NavBtn></Link>
-        </Nav>
+        <div className='min-w-[5rem]'>
+            <Link href={url}>
+                <a className='text-[1.1rem] text-center font-bold hover:text-myblue'>
+                    {navName}
+                </a>
+            </Link>
+        </div>
     )
 }
 
@@ -48,15 +19,15 @@ const Top = () => {
     const url = ["/AboutMe","/","Skill","Others"];
 
     return (
-    <MainTop>
+    <div className='text-center mt-8 mx-8 mb-0 leading-4'>
         <Link href="/">
-            <HomeTitle>SEOYOUNG</HomeTitle>
+            <a className='text-5xl font-bold mb-4 text-myblue'>SEOYOUNG</a>
         </Link>
-        <HomeSubTitle>Welcome To My Website \o/</HomeSubTitle>
-        <NavContainer>
+        <p className='text-[0.9rem] leading-10'>Welcome To My Website \o/</p>
+        <div className='flex justify-evenly items-center mt-9'>
             {navName.map((data,idx) => <NavButton key={idx} navName={data} url = {url[idx]}/>)}
-        </NavContainer>
-    </MainTop>
+        </div>
+    </div>
     );
 }
 
